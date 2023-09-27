@@ -67,10 +67,40 @@
         "padding_top": 44,
         "padding_bottom": 36
       }
+    },
+    "fcea5280-5d3a-4b02-a52f-9e8d2d85941a": {
+      "type": "sign-up-section",
+      "blocks": {
+        "c549112b-ce05-47dd-b3de-6df82c569502": {
+          "type": "heading",
+          "settings": {
+            "form-heading": "Sign up and get 10% off on your next order!"
+          }
+        },
+        "b98117bd-e14a-4f3c-abde-11fa171d0a15": {
+          "type": "sub-heading",
+          "settings": {
+            "form-subheading": "Get access to product drops, special offers and more when you sign up."
+          }
+        },
+        "d43e057f-5c7d-4c62-b830-3dc809fcbc27": {
+          "type": "email-form",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "c549112b-ce05-47dd-b3de-6df82c569502",
+        "b98117bd-e14a-4f3c-abde-11fa171d0a15",
+        "d43e057f-5c7d-4c62-b830-3dc809fcbc27"
+      ],
+      "settings": {
+      }
     }
   },
   "order": [
     "b5b582ef-f59f-4a50-bd90-58e232802bdc",
-    "featured_collection"
+    "featured_collection",
+    "fcea5280-5d3a-4b02-a52f-9e8d2d85941a"
   ]
 }
