@@ -1,0 +1,138 @@
+{%- schema -%}
+{
+    "name": "custom-banner",
+    "settings": [
+        {
+            "type": "image_picker",
+            "id": "banner-image",
+            "label": "Image"
+        },
+        {
+            "type": "text",
+            "id": "test-text",
+            "label": "Add text"
+        }
+    ],
+    "blocks": [
+    {
+      "type": "heading",
+      "name": "custom-banner_heading",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "inline_richtext",
+          "id": "banner-heading",
+          "default": "Image banner",
+          "label": "Banner Heading"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "name": "custom-banner_subtext",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "inline_richtext",
+          "id": "banner-text",
+          "default": "Give customers details about the banner image(s) or content on the template.",
+          "label": "Banner Subtext"
+        }
+      ]
+    },
+    {
+      "type": "buttons",
+      "name": "custom-banner_button",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "banner-button",
+          "default": "Button label",
+          "label": "Button text"
+        },
+        {
+          "type": "url",
+          "id": "banner-button-link",
+          "label": "Button Link"
+        }
+      ]
+    }
+  ],
+    "presets": [
+    {
+      "name": "custom-banner"
+    }
+  ]
+}
+{%- endschema-%}
+{% style %}
+    #banner-content{
+        position:relative;
+    }
+    #banner-content img{
+        width:100%;
+        object-fit:cover;
+    }
+    #banner-block-content{
+        position: absolute;
+        top:35%;
+        left:10%;
+    }
+    #banner-block-content h2{
+        font-size: 32px;
+        font-weight: bold;
+    }
+    #banner-block-content p{
+        font-size: 16px;
+    }
+    #banner-block-content button{
+        border:none;
+        background-color:black;
+        color: white;
+        margin-top:20px;
+        padding:15px 20px;
+        border-radius:15px;
+        cursor: pointer;
+    }
+{% endstyle %}
+<p>{{section.settings.test-text}}</p>
+<div id="banner-content">
+    {% if section.settings.banner-image %}
+      {%- liquid
+        assign image_height = section.settings.banner-image.width | divided_by: section.settings.banner-image.aspect_ratio
+      -%}
+      {{
+        section.settings.banner-image
+        | image_url: width: 3840
+        | image_tag:
+          loading: 'lazy',
+          width: section.settings.banner-image.width,
+          height: image_height
+      }}
+    {% endif %}
+    <div id="banner-block-content">
+      {%- for block in section.blocks -%}
+        {%- case block.type -%}
+          {%- when 'heading' -%}
+            <h2 id="banner-h">
+              {{ block.settings.banner-heading }}
+            </h2>
+          {%- when 'text' -%}
+              <p>{{ block.settings.banner-text }}</p>
+          {%- when 'buttons' -%}
+            {%- if block.settings.banner-button != blank -%}
+                <button
+                  {% if block.settings.banner-button-link == blank %}
+                    role="link" aria-disabled="true"
+                  {% else %}
+                    onclick=window.location.href="{{ block.settings.banner-button-link }}"
+                  {% endif %}
+                >
+                  {{- block.settings.banner-button | escape -}}
+                </button>
+              {%- endif -%}
+        {%- endcase -%}
+      {%- endfor -%}
+    </div>
+</div>

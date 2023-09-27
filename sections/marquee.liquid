@@ -1,0 +1,54 @@
+{%- schema -%}
+{
+    "name": "marquee",
+    "blocks": [
+    {
+      "type": "text",
+      "name": "marquee-content",
+      "limit": 5,
+      "settings": [
+        {
+          "type": "text",
+          "id": "marquee_liquid",
+          "label": "Add text"
+        }
+      ]
+    }
+    ],
+    "presets": [
+    {
+      "name": "marquee"
+    }
+  ]
+}
+{%- endschema -%}
+{%- style -%}
+marquee{
+    display:flex;
+    align-items:center;
+    background-color: black;
+    color:white;
+    padding: 5px 0;
+}
+marquee div img{
+    display: inline-block;
+    margin:0;
+    padding-left:50px;
+    padding-right:50px;
+}
+marquee div{
+    display:inline-block;
+}
+{%- endstyle -%}
+<marquee>
+    <div>
+    {%- for block in section.blocks -%}
+        {%- case block.type -%}
+          {%- when 'text' -%}
+             {{ block.settings.marquee_liquid }}
+             <img src="https://cdn.shopify.com/s/files/1/0828/9196/4697/files/Union_1.png?v=1695735499">
+        {% endcase %}
+    {% endfor %}
+    
+    </div>
+</marquee>
