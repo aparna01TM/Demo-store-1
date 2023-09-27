@@ -96,11 +96,52 @@
       ],
       "settings": {
       }
+    },
+    "fb19255e-35f0-4355-a129-05cc0b34093d": {
+      "type": "collection-list",
+      "blocks": {
+        "template--21203673710873__fb19255e-35f0-4355-a129-05cc0b34093d-featured_collection-1": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "frontpage"
+          }
+        },
+        "template--21203673710873__fb19255e-35f0-4355-a129-05cc0b34093d-featured_collection-2": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "clothing"
+          }
+        },
+        "template--21203673710873__fb19255e-35f0-4355-a129-05cc0b34093d-featured_collection-3": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "featured-products"
+          }
+        }
+      },
+      "block_order": [
+        "template--21203673710873__fb19255e-35f0-4355-a129-05cc0b34093d-featured_collection-1",
+        "template--21203673710873__fb19255e-35f0-4355-a129-05cc0b34093d-featured_collection-2",
+        "template--21203673710873__fb19255e-35f0-4355-a129-05cc0b34093d-featured_collection-3"
+      ],
+      "settings": {
+        "title": "Collections",
+        "heading_size": "h1",
+        "image_ratio": "square",
+        "columns_desktop": 3,
+        "color_scheme": "",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "b5b582ef-f59f-4a50-bd90-58e232802bdc",
     "featured_collection",
-    "fcea5280-5d3a-4b02-a52f-9e8d2d85941a"
+    "fcea5280-5d3a-4b02-a52f-9e8d2d85941a",
+    "fb19255e-35f0-4355-a129-05cc0b34093d"
   ]
 }
