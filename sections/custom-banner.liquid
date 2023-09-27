@@ -8,10 +8,11 @@
             "label": "Image"
         },
         {
-            "type": "text",
-            "id": "test-text",
-            "label": "Add text"
+            "type": "image_picker",
+            "id": "banner-image-2",
+            "label": "Responsive Image"
         }
+        
     ],
     "blocks": [
     {
@@ -95,9 +96,31 @@
         border-radius:15px;
         cursor: pointer;
     }
+    #responsive-banner{
+      display: none;
+    }
+    @media (max-width:900px){
+      #desktop-banner{
+        display:none;
+      }
+      #responsive-banner{
+      display: block;
+      height:auto;
+    }  
+    #banner-block-content{
+      position:static;
+      padding:20px;
+      background-color:beige;
+    }
+    #responsive-banner img{
+      object-fit:contain;
+      height:auto;
+    }
+    }
 {% endstyle %}
 <p>{{section.settings.test-text}}</p>
 <div id="banner-content">
+  <div id="desktop-banner">
     {% if section.settings.banner-image %}
       {%- liquid
         assign image_height = section.settings.banner-image.width | divided_by: section.settings.banner-image.aspect_ratio
@@ -111,6 +134,22 @@
           height: image_height
       }}
     {% endif %}
+  </div>
+  <div id="responsive-banner">
+    {% if section.settings.banner-image-2 %}
+      {%- liquid
+        assign image_height = section.settings.banner-image-2.width | divided_by: section.settings.banner-image-2.aspect_ratio
+      -%}
+      {{
+        section.settings.banner-image-2
+        | image_url: width: 3840
+        | image_tag:
+          loading: 'lazy',
+          width: section.settings.banner-image-2.width,
+          height: image_height
+      }}
+    {% endif %}
+  </div>
     <div id="banner-block-content">
       {%- for block in section.blocks -%}
         {%- case block.type -%}
