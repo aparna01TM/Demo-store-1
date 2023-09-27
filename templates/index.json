@@ -6,15 +6,8 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "FOLLOW CURRENT TRENDS",
-            "heading_size": "h0"
-          }
-        },
-        "3aff1fb5-0ac0-42a9-86ad-c9421420775b": {
-          "type": "text",
-          "settings": {
-            "text": "BROWSE OUR LATEST COLLECTION",
-            "text_style": "body"
+            "heading": "BROWSE OUR LATEST COLLECTION",
+            "heading_size": "h1"
           }
         },
         "button": {
@@ -31,11 +24,10 @@
       },
       "block_order": [
         "heading",
-        "3aff1fb5-0ac0-42a9-86ad-c9421420775b",
         "button"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/banner2.png",
+        "image": "shopify:\/\/shop_images\/banner3.png",
         "image_overlay_opacity": 20,
         "image_height": "large",
         "desktop_content_position": "middle-left",
@@ -56,7 +48,7 @@
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "all",
+        "collection": "featured-products",
         "products_to_show": 8,
         "columns_desktop": 4,
         "full_width": false,
@@ -64,7 +56,7 @@
         "view_all_style": "solid",
         "enable_desktop_slider": false,
         "color_scheme": "background-1",
-        "image_ratio": "adapt",
+        "image_ratio": "portrait",
         "image_shape": "default",
         "show_secondary_image": true,
         "show_vendor": false,
