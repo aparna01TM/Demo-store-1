@@ -1,0 +1,180 @@
+{% schema %}
+{
+    "name": "promotion",
+    "blocks":[
+    {
+        "type": "image-0",
+        "name": "main-promotion-image",
+        "limit": 1,
+        "settings": [
+            {
+                "type": "image_picker",
+                "id": "main-image",
+                "label": "Image"
+            }
+        ]
+    },
+    {
+        "type": "image-1",
+        "name": "promotion-image-1",
+        "limit": 1,
+        "settings": [
+            {
+                "type": "image_picker",
+                "id": "promotion-image-1",
+                "label": "Image"
+            },
+            {
+                "type": "url",
+                "id": "image-1-link",
+                "label": "Image Link"
+            }
+        ]
+    },
+    {
+        "type": "image-2",
+        "name": "promotion-image-2",
+        "limit": 1,
+        "settings": [
+            {
+                "type": "image_picker",
+                "id": "promotion-image-2",
+                "label": "Image"
+            },
+            {
+                "type": "url",
+                "id": "image-2-link",
+                "label": "Image Link"
+            }
+        ]
+    },
+    {
+        "type": "image-3",
+        "name": "promotion-image-3",
+        "limit": 1,
+        "settings": [
+            {
+                "type": "image_picker",
+                "id": "promotion-image-3",
+                "label": "Image"
+            },
+            {
+                "type": "url",
+                "id": "image-3-link",
+                "label": "Image Link"
+            }
+        ]
+    }
+    ],
+    "presets": [
+    {
+      "name": "promotion"
+    }
+  ]
+}
+{% endschema%}
+{% style %}
+#promotion-banner{
+    display: flex;
+    flex-direction:column;
+    row-gap:11px;
+    justify-content:center;
+    align-items:center;
+    background-image: url('https://cdn.shopify.com/s/files/1/0828/9196/4697/files/Homepage-Kat-SpecialEventSection-Background_1920x_1df972e6-4c34-4162-986e-ae5e7b52fdb8.webp?v=1695810806');
+    padding:25px;
+}
+#subimage{
+    display:flex;
+    column-gap:20px;
+}
+#mainimage{
+    overflow:hidden;
+}
+#mainimage img:hover{
+    transform: scale(1.1);
+    transition: 0.5s all ease-in-out;
+}
+@media(max-width:1045px){
+    #mainimage{
+        width: 700px;
+    }
+    #mainimage img{
+        width:100%;
+        object-fit:contain;
+        height:auto;
+    }
+    #subimage{
+        width:700px;
+    }
+    #subimage > div > a > img{
+            width: 100%;
+            object-fit: contain;
+            height:auto;
+    }
+}
+@media(max-width:730px){
+    #subimage{
+        flex-direction:column;
+        width:50%;
+    }
+    #mainimage{
+        width: 90%;
+    }
+}
+{% endstyle%}
+<div id="promotion-banner">
+   <div id="mainimage">
+      {%- for block in section.blocks -%}
+        {% if block.settings.main-image %}
+          {{block.settings.main-image | image_url: width:1000, height: 300 | image_tag}}
+        {%- endif -%}
+      {%- endfor -%}
+   </div>
+   <div id="subimage">
+      <div>
+         {%- for block in section.blocks -%}
+           {% if block.settings.promotion-image-1 %}
+              <a
+                  {% if block.settings.image-1-link == blank %}
+                    role="link" aria-disabled="true"
+                  {% else %}
+                    href="{{ block.settings.image-1-link }}"
+                  {% endif %}
+                >
+                {{block.settings.promotion-image-1 | image_url: width: 320 | image_tag }}
+                </a>
+           {%- endif -%}
+         {%- endfor -%}
+      </div>
+      <div>
+         {%- for block in section.blocks -%}
+           {%- if block.settings.promotion-image-2-%}
+              <a
+                  {% if block.settings.image-2-link == blank %}
+                    role="link" aria-disabled="true"
+                  {% else %}
+                    href="{{ block.settings.image-2-link }}"
+                  {% endif %}
+                >
+                {{block.settings.promotion-image-2 | image_url: width: 320 | image_tag}}
+                </a>
+           {%- endif -%}
+         {%- endfor -%}
+      </div>
+      <div>
+         {%- for block in section.blocks -%}
+           {%- if block.settings.promotion-image-3 -%}
+             <a
+                  {% if block.settings.image-3-link == blank %}
+                    role="link" aria-disabled="true"
+                  {% else %}
+                    href="{{ block.settings.image-3-link }}"
+                  {% endif %}
+                >
+                {{block.settings.promotion-image-3 | image_url: width:320  | image_tag}}
+                </a>
+           {%- endif -%}
+         {%- endfor -%}
+      </div>
+   </div>
+</div>
