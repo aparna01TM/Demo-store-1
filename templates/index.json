@@ -1,51 +1,43 @@
 {
   "sections": {
-    "image_banner": {
-      "type": "image-banner",
+    "b5b582ef-f59f-4a50-bd90-58e232802bdc": {
+      "type": "promotion",
       "blocks": {
-        "heading": {
-          "type": "heading",
+        "9d91e2db-9dcc-4559-9fb9-1cebf974b290": {
+          "type": "image-0",
           "settings": {
-            "heading": "FOLLOW CURRENT TRENDS",
-            "heading_size": "h0"
+            "main-image": "shopify:\/\/shop_images\/Homepage-Kat-SpecialEventSection-TopBanner_af6ae6dd-3f6a-449a-9a7e-643e16ff3105.webp"
           }
         },
-        "3aff1fb5-0ac0-42a9-86ad-c9421420775b": {
-          "type": "text",
+        "026d9fdf-fff1-4487-90de-8007239e62d6": {
+          "type": "image-1",
           "settings": {
-            "text": "BROWSE OUR LATEST COLLECTION",
-            "text_style": "body"
+            "promotion-image-1": "shopify:\/\/shop_images\/01-Accessories-Headwear-Tile.webp",
+            "image-1-link": "shopify:\/\/collections\/clothing"
           }
         },
-        "button": {
-          "type": "buttons",
+        "e533e424-33f9-47d8-956b-1aa502a16bd5": {
+          "type": "image-2",
           "settings": {
-            "button_label_1": "Shop all",
-            "button_link_1": "shopify:\/\/collections\/all",
-            "button_style_secondary_1": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "promotion-image-2": "shopify:\/\/shop_images\/02-Youth-Apparel-Tile.webp",
+            "image-2-link": "shopify:\/\/collections\/featured-products"
+          }
+        },
+        "41de7eb9-953c-4bf5-ab13-ff121c6ee86c": {
+          "type": "image-3",
+          "settings": {
+            "promotion-image-3": "shopify:\/\/shop_images\/02-Adult-Apparel-Tile_1.webp",
+            "image-3-link": "shopify:\/\/collections\/frontpage"
           }
         }
       },
       "block_order": [
-        "heading",
-        "3aff1fb5-0ac0-42a9-86ad-c9421420775b",
-        "button"
+        "9d91e2db-9dcc-4559-9fb9-1cebf974b290",
+        "026d9fdf-fff1-4487-90de-8007239e62d6",
+        "e533e424-33f9-47d8-956b-1aa502a16bd5",
+        "41de7eb9-953c-4bf5-ab13-ff121c6ee86c"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/banner2.png",
-        "image_overlay_opacity": 20,
-        "image_height": "large",
-        "desktop_content_position": "middle-left",
-        "show_text_box": false,
-        "desktop_content_alignment": "left",
-        "color_scheme": "inverse",
-        "image_behavior": "none",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": false,
-        "show_text_below": false
       }
     },
     "featured_collection": {
@@ -78,7 +70,7 @@
     }
   },
   "order": [
-    "image_banner",
+    "b5b582ef-f59f-4a50-bd90-58e232802bdc",
     "featured_collection"
   ]
 }
