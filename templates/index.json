@@ -111,11 +111,45 @@
         "padding_top": 44,
         "padding_bottom": 36
       }
+    },
+    "1807825d-43ea-4559-b4ec-4775975a935f": {
+      "type": "custom-banner",
+      "blocks": {
+        "3b390714-ac10-4253-9151-38abbc1c8fa6": {
+          "type": "heading",
+          "settings": {
+            "banner-heading": "FIND YOUR STYLE"
+          }
+        },
+        "b76223c6-8dab-4b4e-954c-3b822b19aef0": {
+          "type": "text",
+          "settings": {
+            "banner-text": "FOLLOW CURRENT TRENDS"
+          }
+        },
+        "37cd7f7c-608b-4314-93c7-3abe6f45de15": {
+          "type": "buttons",
+          "settings": {
+            "banner-button": "SHOP NOW",
+            "banner-button-link": "shopify:\/\/collections\/all"
+          }
+        }
+      },
+      "block_order": [
+        "3b390714-ac10-4253-9151-38abbc1c8fa6",
+        "b76223c6-8dab-4b4e-954c-3b822b19aef0",
+        "37cd7f7c-608b-4314-93c7-3abe6f45de15"
+      ],
+      "settings": {
+        "banner-image": "shopify:\/\/shop_images\/banner2.png",
+        "banner-image-2": "shopify:\/\/shop_images\/banner2_c5ac12be-aeaf-492f-9a93-f83b1cbe369d.png"
+      }
     }
   },
   "order": [
     "88e39b43-c570-4b28-874e-4614b5800deb",
     "image_banner",
-    "featured_collection"
+    "featured_collection",
+    "1807825d-43ea-4559-b4ec-4775975a935f"
   ]
 }
