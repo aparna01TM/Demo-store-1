@@ -144,12 +144,55 @@
         "banner-image": "shopify:\/\/shop_images\/banner2.png",
         "banner-image-2": "shopify:\/\/shop_images\/banner2_c5ac12be-aeaf-492f-9a93-f83b1cbe369d.png"
       }
+    },
+    "1e94da30-4624-4da1-9aef-abb53e7e4bc5": {
+      "type": "rich-text",
+      "blocks": {
+        "template--21194439721241__1e94da30-4624-4da1-9aef-abb53e7e4bc5-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "ABOUT BASICS",
+            "heading_size": "h1"
+          }
+        },
+        "template--21194439721241__1e94da30-4624-4da1-9aef-abb53e7e4bc5-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Founded by a team of fashion enthusiasts. We source the finest materials available. We as a brand is also dedicated to minimizing our environmental footprint. Since 2001.<\/p>"
+          }
+        },
+        "template--21194439721241__1e94da30-4624-4da1-9aef-abb53e7e4bc5-button-1": {
+          "type": "button",
+          "settings": {
+            "button_label": "SHOP NOW",
+            "button_link": "shopify:\/\/collections\/all",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--21194439721241__1e94da30-4624-4da1-9aef-abb53e7e4bc5-heading-1",
+        "template--21194439721241__1e94da30-4624-4da1-9aef-abb53e7e4bc5-text-1",
+        "template--21194439721241__1e94da30-4624-4da1-9aef-abb53e7e4bc5-button-1"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
     "88e39b43-c570-4b28-874e-4614b5800deb",
     "image_banner",
     "featured_collection",
-    "1807825d-43ea-4559-b4ec-4775975a935f"
+    "1807825d-43ea-4559-b4ec-4775975a935f",
+    "1e94da30-4624-4da1-9aef-abb53e7e4bc5"
   ]
 }
