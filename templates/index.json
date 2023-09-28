@@ -1,5 +1,42 @@
 {
   "sections": {
+    "c1b14fdd-3771-405b-a021-2ee841974392": {
+      "type": "marquee",
+      "blocks": {
+        "980c6f8c-6208-406e-8515-e861a2b19754": {
+          "type": "text",
+          "settings": {
+            "marquee_liquid": "FREE DELIVERY ON ALL ORDERS"
+          }
+        },
+        "e93643fe-a3c9-43f5-84be-7452b37a299e": {
+          "type": "text",
+          "settings": {
+            "marquee_liquid": "DOOR DELIVERY AVAILABLE"
+          }
+        },
+        "2af5bdfc-daf9-4ac7-975b-4c760a4784cb": {
+          "type": "text",
+          "settings": {
+            "marquee_liquid": "AFFORDABLE PRODUCTS"
+          }
+        },
+        "6b14b2b1-d129-4563-abc9-70d633b46040": {
+          "type": "text",
+          "settings": {
+            "marquee_liquid": "GET UPTO 25% OFF"
+          }
+        }
+      },
+      "block_order": [
+        "980c6f8c-6208-406e-8515-e861a2b19754",
+        "e93643fe-a3c9-43f5-84be-7452b37a299e",
+        "2af5bdfc-daf9-4ac7-975b-4c760a4784cb",
+        "6b14b2b1-d129-4563-abc9-70d633b46040"
+      ],
+      "settings": {
+      }
+    },
     "a2423707-95ca-4e4d-82c2-d07b94172016": {
       "type": "custom-banner",
       "blocks": {
@@ -144,6 +181,7 @@
     }
   },
   "order": [
+    "c1b14fdd-3771-405b-a021-2ee841974392",
     "a2423707-95ca-4e4d-82c2-d07b94172016",
     "b5b582ef-f59f-4a50-bd90-58e232802bdc",
     "fb19255e-35f0-4355-a129-05cc0b34093d",
