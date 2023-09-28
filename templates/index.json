@@ -1,84 +1,118 @@
 {
   "sections": {
-    "image_banner": {
-      "type": "image-banner",
+    "b5b582ef-f59f-4a50-bd90-58e232802bdc": {
+      "type": "promotion",
       "blocks": {
-        "heading": {
-          "type": "heading",
+        "9d91e2db-9dcc-4559-9fb9-1cebf974b290": {
+          "type": "image-0",
           "settings": {
-            "heading": "FOLLOW CURRENT TRENDS",
-            "heading_size": "h0"
+            "main-image": "shopify:\/\/shop_images\/Homepage-Kat-SpecialEventSection-TopBanner_af6ae6dd-3f6a-449a-9a7e-643e16ff3105.webp"
           }
         },
-        "3aff1fb5-0ac0-42a9-86ad-c9421420775b": {
-          "type": "text",
+        "026d9fdf-fff1-4487-90de-8007239e62d6": {
+          "type": "image-1",
           "settings": {
-            "text": "BROWSE OUR LATEST COLLECTION",
-            "text_style": "body"
+            "promotion-image-1": "shopify:\/\/shop_images\/01-Accessories-Headwear-Tile.webp",
+            "image-1-link": "shopify:\/\/collections\/clothing"
           }
         },
-        "button": {
-          "type": "buttons",
+        "e533e424-33f9-47d8-956b-1aa502a16bd5": {
+          "type": "image-2",
           "settings": {
-            "button_label_1": "Shop all",
-            "button_link_1": "shopify:\/\/collections\/all",
-            "button_style_secondary_1": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "promotion-image-2": "shopify:\/\/shop_images\/02-Youth-Apparel-Tile.webp",
+            "image-2-link": "shopify:\/\/collections\/featured-products"
+          }
+        },
+        "41de7eb9-953c-4bf5-ab13-ff121c6ee86c": {
+          "type": "image-3",
+          "settings": {
+            "promotion-image-3": "shopify:\/\/shop_images\/02-Adult-Apparel-Tile_1.webp",
+            "image-3-link": "shopify:\/\/collections\/frontpage"
           }
         }
       },
       "block_order": [
-        "heading",
-        "3aff1fb5-0ac0-42a9-86ad-c9421420775b",
-        "button"
+        "9d91e2db-9dcc-4559-9fb9-1cebf974b290",
+        "026d9fdf-fff1-4487-90de-8007239e62d6",
+        "e533e424-33f9-47d8-956b-1aa502a16bd5",
+        "41de7eb9-953c-4bf5-ab13-ff121c6ee86c"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/banner2.png",
-        "image_overlay_opacity": 20,
-        "image_height": "large",
-        "desktop_content_position": "middle-left",
-        "show_text_box": false,
-        "desktop_content_alignment": "left",
-        "color_scheme": "inverse",
-        "image_behavior": "none",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": false,
-        "show_text_below": false
       }
     },
-    "featured_collection": {
-      "type": "featured-collection",
+    "fb19255e-35f0-4355-a129-05cc0b34093d": {
+      "type": "collection-list",
+      "blocks": {
+        "template--21203673710873__fb19255e-35f0-4355-a129-05cc0b34093d-featured_collection-1": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "frontpage"
+          }
+        },
+        "template--21203673710873__fb19255e-35f0-4355-a129-05cc0b34093d-featured_collection-2": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "clothing"
+          }
+        },
+        "template--21203673710873__fb19255e-35f0-4355-a129-05cc0b34093d-featured_collection-3": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "featured-products"
+          }
+        }
+      },
+      "block_order": [
+        "template--21203673710873__fb19255e-35f0-4355-a129-05cc0b34093d-featured_collection-1",
+        "template--21203673710873__fb19255e-35f0-4355-a129-05cc0b34093d-featured_collection-2",
+        "template--21203673710873__fb19255e-35f0-4355-a129-05cc0b34093d-featured_collection-3"
+      ],
       "settings": {
-        "title": "Featured products",
-        "heading_size": "h2",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "all",
-        "products_to_show": 8,
-        "columns_desktop": 4,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "color_scheme": "background-1",
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "enable_quick_add": false,
-        "columns_mobile": "2",
+        "title": "Collections",
+        "heading_size": "h1",
+        "image_ratio": "square",
+        "columns_desktop": 3,
+        "color_scheme": "",
+        "show_view_all": false,
+        "columns_mobile": "1",
         "swipe_on_mobile": false,
-        "padding_top": 44,
+        "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "fcea5280-5d3a-4b02-a52f-9e8d2d85941a": {
+      "type": "sign-up-section",
+      "blocks": {
+        "c549112b-ce05-47dd-b3de-6df82c569502": {
+          "type": "heading",
+          "settings": {
+            "form-heading": "Sign up and get 10% off on your next order!"
+          }
+        },
+        "b98117bd-e14a-4f3c-abde-11fa171d0a15": {
+          "type": "sub-heading",
+          "settings": {
+            "form-subheading": "Get access to product drops, special offers and more when you sign up."
+          }
+        },
+        "d43e057f-5c7d-4c62-b830-3dc809fcbc27": {
+          "type": "email-form",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "c549112b-ce05-47dd-b3de-6df82c569502",
+        "b98117bd-e14a-4f3c-abde-11fa171d0a15",
+        "d43e057f-5c7d-4c62-b830-3dc809fcbc27"
+      ],
+      "settings": {
       }
     }
   },
   "order": [
-    "image_banner",
-    "featured_collection"
+    "b5b582ef-f59f-4a50-bd90-58e232802bdc",
+    "fb19255e-35f0-4355-a129-05cc0b34093d",
+    "fcea5280-5d3a-4b02-a52f-9e8d2d85941a"
   ]
 }
