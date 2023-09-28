@@ -73,7 +73,7 @@
     "360a946e-de66-41fa-b761-e66495ccc321": {
       "type": "featured-collection",
       "settings": {
-        "title": "Featured collection",
+        "title": "FEATURED PRODUCTS",
         "heading_size": "h1",
         "description": "",
         "show_description": false,
@@ -166,7 +166,7 @@
         "template--21203673710873__fb19255e-35f0-4355-a129-05cc0b34093d-featured_collection-3"
       ],
       "settings": {
-        "title": "Collections",
+        "title": "COLLECTIONS",
         "heading_size": "h1",
         "image_ratio": "square",
         "columns_desktop": 3,
