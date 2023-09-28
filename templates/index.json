@@ -178,6 +178,48 @@
       ],
       "settings": {
       }
+    },
+    "4318825e-b146-44e7-8a29-ca57dc6367d6": {
+      "type": "rich-text",
+      "blocks": {
+        "template--21203673710873__4318825e-b146-44e7-8a29-ca57dc6367d6-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "ABOUT BASICS",
+            "heading_size": "h1"
+          }
+        },
+        "template--21203673710873__4318825e-b146-44e7-8a29-ca57dc6367d6-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Founded by a team of fashion enthusiasts. We source <br\/>the finest materials available. We as a brand is also dedicated to <br\/>minimizing our environmental footprint. Since 2001.<\/p>"
+          }
+        },
+        "template--21203673710873__4318825e-b146-44e7-8a29-ca57dc6367d6-button-1": {
+          "type": "button",
+          "settings": {
+            "button_label": "SHOP NOW",
+            "button_link": "shopify:\/\/collections\/all",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--21203673710873__4318825e-b146-44e7-8a29-ca57dc6367d6-heading-1",
+        "template--21203673710873__4318825e-b146-44e7-8a29-ca57dc6367d6-text-1",
+        "template--21203673710873__4318825e-b146-44e7-8a29-ca57dc6367d6-button-1"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
@@ -185,6 +227,7 @@
     "a2423707-95ca-4e4d-82c2-d07b94172016",
     "b5b582ef-f59f-4a50-bd90-58e232802bdc",
     "fb19255e-35f0-4355-a129-05cc0b34093d",
-    "fcea5280-5d3a-4b02-a52f-9e8d2d85941a"
+    "fcea5280-5d3a-4b02-a52f-9e8d2d85941a",
+    "4318825e-b146-44e7-8a29-ca57dc6367d6"
   ]
 }
