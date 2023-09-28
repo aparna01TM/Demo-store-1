@@ -1,5 +1,38 @@
 {
   "sections": {
+    "a2423707-95ca-4e4d-82c2-d07b94172016": {
+      "type": "custom-banner",
+      "blocks": {
+        "3cfd3c8a-3a88-4181-b528-3cbaeef64f68": {
+          "type": "heading",
+          "settings": {
+            "banner-heading": "FIND YOUR STYLE"
+          }
+        },
+        "d879b52c-c70c-463d-a522-42b980eb42f1": {
+          "type": "text",
+          "settings": {
+            "banner-text": "SHOP FROM OUR LATEST COLLECTION"
+          }
+        },
+        "aedc03c2-fa5e-4dc3-b73c-52113e1bad25": {
+          "type": "buttons",
+          "settings": {
+            "banner-button": "SHOP NOW",
+            "banner-button-link": "shopify:\/\/collections\/all"
+          }
+        }
+      },
+      "block_order": [
+        "3cfd3c8a-3a88-4181-b528-3cbaeef64f68",
+        "d879b52c-c70c-463d-a522-42b980eb42f1",
+        "aedc03c2-fa5e-4dc3-b73c-52113e1bad25"
+      ],
+      "settings": {
+        "banner-image": "shopify:\/\/shop_images\/banner2.png",
+        "banner-image-2": "shopify:\/\/shop_images\/banner2_c5ac12be-aeaf-492f-9a93-f83b1cbe369d.png"
+      }
+    },
     "b5b582ef-f59f-4a50-bd90-58e232802bdc": {
       "type": "promotion",
       "blocks": {
@@ -111,6 +144,7 @@
     }
   },
   "order": [
+    "a2423707-95ca-4e4d-82c2-d07b94172016",
     "b5b582ef-f59f-4a50-bd90-58e232802bdc",
     "fb19255e-35f0-4355-a129-05cc0b34093d",
     "fcea5280-5d3a-4b02-a52f-9e8d2d85941a"
