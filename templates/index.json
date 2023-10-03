@@ -1,5 +1,103 @@
 {
   "sections": {
+    "c1b14fdd-3771-405b-a021-2ee841974392": {
+      "type": "marquee",
+      "blocks": {
+        "980c6f8c-6208-406e-8515-e861a2b19754": {
+          "type": "text",
+          "settings": {
+            "marquee_liquid": "FREE DELIVERY ON ALL ORDERS"
+          }
+        },
+        "e93643fe-a3c9-43f5-84be-7452b37a299e": {
+          "type": "text",
+          "settings": {
+            "marquee_liquid": "DOOR DELIVERY AVAILABLE"
+          }
+        },
+        "2af5bdfc-daf9-4ac7-975b-4c760a4784cb": {
+          "type": "text",
+          "settings": {
+            "marquee_liquid": "AFFORDABLE PRODUCTS"
+          }
+        },
+        "6b14b2b1-d129-4563-abc9-70d633b46040": {
+          "type": "text",
+          "settings": {
+            "marquee_liquid": "GET UPTO 25% OFF"
+          }
+        }
+      },
+      "block_order": [
+        "980c6f8c-6208-406e-8515-e861a2b19754",
+        "e93643fe-a3c9-43f5-84be-7452b37a299e",
+        "2af5bdfc-daf9-4ac7-975b-4c760a4784cb",
+        "6b14b2b1-d129-4563-abc9-70d633b46040"
+      ],
+      "settings": {
+      }
+    },
+    "a2423707-95ca-4e4d-82c2-d07b94172016": {
+      "type": "custom-banner",
+      "blocks": {
+        "3cfd3c8a-3a88-4181-b528-3cbaeef64f68": {
+          "type": "heading",
+          "settings": {
+            "banner-heading": "FIND YOUR STYLE"
+          }
+        },
+        "d879b52c-c70c-463d-a522-42b980eb42f1": {
+          "type": "text",
+          "settings": {
+            "banner-text": "SHOP FROM OUR LATEST COLLECTION"
+          }
+        },
+        "aedc03c2-fa5e-4dc3-b73c-52113e1bad25": {
+          "type": "buttons",
+          "settings": {
+            "banner-button": "SHOP NOW",
+            "banner-button-link": "shopify:\/\/collections\/all"
+          }
+        }
+      },
+      "block_order": [
+        "3cfd3c8a-3a88-4181-b528-3cbaeef64f68",
+        "d879b52c-c70c-463d-a522-42b980eb42f1",
+        "aedc03c2-fa5e-4dc3-b73c-52113e1bad25"
+      ],
+      "settings": {
+        "banner-image": "shopify:\/\/shop_images\/banner3.png",
+        "banner-image-2": "shopify:\/\/shop_images\/banner3_09ff1537-747e-4362-9fb3-5f57246855a4.png"
+      }
+    },
+    "360a946e-de66-41fa-b761-e66495ccc321": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "FEATURED PRODUCTS",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "featured-products",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "portrait",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "b5b582ef-f59f-4a50-bd90-58e232802bdc": {
       "type": "promotion",
       "blocks": {
@@ -68,7 +166,7 @@
         "template--21203673710873__fb19255e-35f0-4355-a129-05cc0b34093d-featured_collection-3"
       ],
       "settings": {
-        "title": "Collections",
+        "title": "COLLECTIONS",
         "heading_size": "h1",
         "image_ratio": "square",
         "columns_desktop": 3,
@@ -108,11 +206,57 @@
       ],
       "settings": {
       }
+    },
+    "4318825e-b146-44e7-8a29-ca57dc6367d6": {
+      "type": "rich-text",
+      "blocks": {
+        "template--21203673710873__4318825e-b146-44e7-8a29-ca57dc6367d6-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "ABOUT BASICS",
+            "heading_size": "h1"
+          }
+        },
+        "template--21203673710873__4318825e-b146-44e7-8a29-ca57dc6367d6-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Founded by a team of fashion enthusiasts. We source <br\/>the finest materials available. We as a brand is also dedicated to <br\/>minimizing our environmental footprint. Since 2001.<\/p>"
+          }
+        },
+        "template--21203673710873__4318825e-b146-44e7-8a29-ca57dc6367d6-button-1": {
+          "type": "button",
+          "settings": {
+            "button_label": "SHOP NOW",
+            "button_link": "shopify:\/\/collections\/all",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--21203673710873__4318825e-b146-44e7-8a29-ca57dc6367d6-heading-1",
+        "template--21203673710873__4318825e-b146-44e7-8a29-ca57dc6367d6-text-1",
+        "template--21203673710873__4318825e-b146-44e7-8a29-ca57dc6367d6-button-1"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
+    "c1b14fdd-3771-405b-a021-2ee841974392",
+    "a2423707-95ca-4e4d-82c2-d07b94172016",
+    "360a946e-de66-41fa-b761-e66495ccc321",
     "b5b582ef-f59f-4a50-bd90-58e232802bdc",
     "fb19255e-35f0-4355-a129-05cc0b34093d",
-    "fcea5280-5d3a-4b02-a52f-9e8d2d85941a"
+    "fcea5280-5d3a-4b02-a52f-9e8d2d85941a",
+    "4318825e-b146-44e7-8a29-ca57dc6367d6"
   ]
 }
