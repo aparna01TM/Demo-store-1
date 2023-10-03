@@ -35,10 +35,18 @@
             "login_text": "Login",
             "login_page": "login"
           }
+        },
+        "9baab39e-6666-4bb8-9b34-d625bd6285d6": {
+          "type": "register-popup",
+          "settings": {
+            "register_text": "Register",
+            "register_page": "sign-up"
+          }
         }
       },
       "block_order": [
-        "226ab22c-1416-4a29-96a3-44332b7e9086"
+        "226ab22c-1416-4a29-96a3-44332b7e9086",
+        "9baab39e-6666-4bb8-9b34-d625bd6285d6"
       ],
       "settings": {
         "logo_position": "middle-left",
