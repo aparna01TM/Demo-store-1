@@ -42,11 +42,35 @@
             "register_text": "Register",
             "register_page": "sign-up"
           }
+        },
+        "4d12a56a-2619-454c-b6ea-3d1e5d62ff8b": {
+          "type": "forgot-password-popup",
+          "settings": {
+            "forgot_password_text": "Forgot your password?",
+            "forgot_password_page": "forgot-password"
+          }
+        },
+        "b76c8164-23fa-45af-a298-36bed1358818": {
+          "type": "redirect-register-popup",
+          "settings": {
+            "redirect_register_text": "Create Account",
+            "redirect_register_page": "sign-up"
+          }
+        },
+        "914c9934-115d-455c-89b3-15d14aea274c": {
+          "type": "redirect-login-popup",
+          "settings": {
+            "redirect_login_text": "Login",
+            "login_page": "login"
+          }
         }
       },
       "block_order": [
         "226ab22c-1416-4a29-96a3-44332b7e9086",
-        "9baab39e-6666-4bb8-9b34-d625bd6285d6"
+        "9baab39e-6666-4bb8-9b34-d625bd6285d6",
+        "4d12a56a-2619-454c-b6ea-3d1e5d62ff8b",
+        "b76c8164-23fa-45af-a298-36bed1358818",
+        "914c9934-115d-455c-89b3-15d14aea274c"
       ],
       "settings": {
         "logo_position": "middle-left",
