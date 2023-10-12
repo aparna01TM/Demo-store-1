@@ -1,0 +1,50 @@
+.basic-banner-content{
+    position:relative;
+}
+.basic-banner-content img{
+    width:100%;
+    object-fit:cover;
+}
+.banner-block-content{
+    position: absolute;
+    top:35%;
+    left:10%;
+}
+.banner-block-content h2{
+    font-size: 32px;
+    font-weight: bold;
+}
+.banner-block-content p{
+    font-size: 16px;
+}
+.banner-block-content a{
+    border:none;
+    background-color:black;
+    text-decoration:none;
+    color: white;
+    margin-top:20px;
+    padding:15px 20px;
+    border-radius:15px;
+    cursor: pointer;
+}
+.responsive-banner{
+  display: none;
+}
+@media (max-width:900px){
+  .desktop-banner{
+    display:none;
+  }
+  .responsive-banner{
+  display: block;
+  height:auto;
+}  
+.banner-block-content{
+  position:static;
+  padding:20px;
+  background-color:beige;
+}
+.responsive-banner img{
+  object-fit:contain;
+  height:auto;
+}
+}

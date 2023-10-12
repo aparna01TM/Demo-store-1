@@ -1,0 +1,18 @@
+marquee{
+    display:flex;
+    align-items:center;
+    background-color: black;
+    color:white;
+    padding: 5px 0;
+}
+marquee div img{
+    display: inline-block;
+    vertical-align:middle;
+    line-height: normal;
+    margin:0;
+    padding-left:50px;
+    padding-right:50px;
+}
+marquee div{
+    display:inline-block;
+}

@@ -1,145 +1,83 @@
+{{ 'sign-up-section.css' | asset_url | stylesheet_tag }}
+<div class="email-section">
+ <div class="email-section-content">
+ {%- for block in section.blocks -%}
+  {%- case block.type -%}
+      {%- when 'heading' -%}
+        <h2 class="email-content-heading">{{block.settings.form-heading}}</h2>
+      {%- when 'sub-heading' -%}
+        <p class="email-content-subtext">{{block.settings.form-subheading}}</p>
+ </div>
+      {%- when 'email-form' -%}
+      {%- form 'customer', class: 'signup-form' -%}
+      <input type="hidden" name="contact[tags]" value="newsletter">
+      <input type="email" id="email" name="contact[email]" value="{{ form.email }}" aria-required="true"
+          autocorrect="off"
+          autocapitalize="off"
+          autocomplete="email"
+          {% if form.errors %}
+            autofocus
+            aria-invalid="true"
+            aria-describedby="Newsletter-error--{{ section.id }}"
+          {% elsif form.posted_successfully? %}
+            aria-describedby="Newsletter-success--{{ section.id }}"
+          {% endif %}
+            placeholder="{{ 'newsletter.label' | t }}"
+            required>
+      <button type="submit" name="sub" id="subscribe">Join Now</button>
+      {%- if form.posted_successfully? -%}
+        <h3
+           class="newsletter-form__message newsletter-form__message--success form__message"
+           id="Newsletter-success--{{ section.id }}"
+           tabindex="-1"
+           autofocus style="color:white;"
+         >
+            {% render 'icon-success' -%}
+            {{- 'newsletter.success' | t }}
+        </h3>
+    {%- endif -%}
+    {% endform %}
+  {%- endcase -%}
+ {%- endfor -%}
+</div>
 {% schema %}
 {
-    "name":"email-sign-up",
-    "blocks":[
+  "name":"email-sign-up",
+  "blocks":[
+  {
+    "type":"heading",
+    "name":"sign-up-heading",
+    "limit":1,
+    "settings":[
         {
-            "type":"heading",
-            "name":"sign-up-heading",
-            "limit":1,
-            "settings":[
-                {
-                    "type":"text",
-                    "id":"form-heading",
-                    "label":"Add text"
-                }
-            ]
-        },
-        {
-            "type":"sub-heading",
-            "name":"sign-up-subheading",
-            "limit":1,
-            "settings":[
-                {
-                    "type":"text",
-                    "id":"form-subheading",
-                    "label":"Add text"
-                }
-            ]
-        },
-        {
-            "type":"email-form",
-            "name":"sign-up-email",
-            "limit":1
+          "type":"text",
+          "id":"form-heading",
+          "label":"Add text"
         }
+    ]
+    },
+    {
+      "type":"sub-heading",
+      "name":"sign-up-subheading",
+      "limit":1,
+      "settings":[
+        {
+          "type":"text",
+          "id":"form-subheading",
+          "label":"Add text"
+        }
+      ]
+    },
+    {
+      "type":"email-form",
+      "name":"sign-up-email",
+      "limit":1
+    }
     ],
     "presets":[
-        {
-            "name":"email-sign-up"
-        }
+      {
+          "name":"email-sign-up"
+      }
     ]
 }
 {% endschema %}
-{%- style -%}
-#email-section{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    column-gap:220px;
-    background-color:black;
-    padding:50px 0;
-}
-#email-section-content{
-    display:flex;
-    flex-direction:column;
-    row-gap:14px;
-    width:29%;
-}
-.signup-form{
-    display:flex;
-    flex-direction:column;
-    width:280px;
-    row-gap:17px;
-}
-#email{
-    padding: 10px 5px;
-}
-#subscribe{
-    padding:10px 5px;
-    background-color: #EE0426;
-    border:none;
-    color:white;
-    font-size:16px;
-}
-#email-content-heading{
-    margin-top:0;
-    margin-bottom:0;
-    font-size:32px;
-    font-weight:900;
-    color:white;
-}
-#email-content-subtext{
-    margin-top:0;
-    margin-bottom:0;
-    font-size:16px;
-    font-weight:400;
-    color:white;
-}
-@media(max-width:825px){
-    #email-section{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
-}
-#email-section-content{
-    width:80%;
-}
-#email-content-heading{
-    font-size:16px;
-}
-#email-content-subtext{
-    font-size:14px;
-}
-}
-{%- endstyle-%}
-<div id="email-section">
- <div id="email-section-content">
- {%- for block in section.blocks -%}
-  {%- case block.type -%}
-        {%- when 'heading' -%}
-          <h2 id="email-content-heading">{{block.settings.form-heading}}</h2>
-        {%- when 'sub-heading' -%}
-          <p id="email-content-subtext">{{block.settings.form-subheading}}</p>
- </div>
-        {%- when 'email-form' -%}
- {%- form 'customer', class: 'signup-form' -%}
-    <input type="hidden" name="contact[tags]" value="newsletter">
-    <input type="email" id="email" name="contact[email]" value="{{ form.email }}" aria-required="true"
-                    autocorrect="off"
-                    autocapitalize="off"
-                    autocomplete="email"
-                    {% if form.errors %}
-                      autofocus
-                      aria-invalid="true"
-                      aria-describedby="Newsletter-error--{{ section.id }}"
-                    {% elsif form.posted_successfully? %}
-                      aria-describedby="Newsletter-success--{{ section.id }}"
-                    {% endif %}
-                    placeholder="{{ 'newsletter.label' | t }}"
-                    required>
-    <button type="submit" name="sub" id="subscribe">Join Now</button>
-    {%- if form.posted_successfully? -%}
-                <h3
-                  class="newsletter-form__message newsletter-form__message--success form__message"
-                  id="Newsletter-success--{{ section.id }}"
-                  tabindex="-1"
-                  autofocus style="color:white;"
-                >
-                  {% render 'icon-success' -%}
-                  {{- 'newsletter.success' | t }}
-                </h3>
-              {%- endif -%}
- {% endform %}
- {%- endcase -%}
- {%- endfor -%}
-</div>

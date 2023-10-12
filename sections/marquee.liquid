@@ -1,3 +1,17 @@
+{{ 'marquee.css' | asset_url | stylesheet_tag }}
+<div class="marquee-section">
+  <marquee>
+      <div>
+      {% assign  block_count = section.blocks.size %}
+      {%- for block in section.blocks -%}
+              {{ block.settings.marquee_liquid }}
+              {% if block_count >1 and forloop.index <block_count %}
+                  <img src="https://cdn.shopify.com/s/files/1/0828/9196/4697/files/Union_1.png?v=1695735499">
+              {% endif %}
+      {% endfor %}
+      </div>
+  </marquee>
+</div>
 {% schema %}
 {
     "name": "marquee",
@@ -22,34 +36,3 @@
   ]
 }
 {% endschema %}
-{%- style -%}
-marquee{
-    display:flex;
-    align-items:center;
-    background-color: black;
-    color:white;
-    padding: 5px 0;
-}
-marquee div img{
-    display: inline-block;
-    vertical-align:middle;
-    line-height: normal;
-    margin:0;
-    padding-left:50px;
-    padding-right:50px;
-}
-marquee div{
-    display:inline-block;
-}
-{%- endstyle -%}
-<marquee>
-    <div>
-    {% assign  block_count = section.blocks.size %}
-    {%- for block in section.blocks -%}
-             {{ block.settings.marquee_liquid }}
-             {% if block_count >1 and forloop.index <block_count %}
-                <img src="https://cdn.shopify.com/s/files/1/0828/9196/4697/files/Union_1.png?v=1695735499">
-             {% endif %}
-    {% endfor %}
-    </div>
-</marquee>

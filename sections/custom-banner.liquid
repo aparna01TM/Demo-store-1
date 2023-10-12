@@ -1,3 +1,107 @@
+{{ 'custom-banner.css' | asset_url | stylesheet_tag }}
+{% style %}
+.basic-banner-content{
+    position:relative;
+}
+.basic-banner-content img{
+    width:100%;
+    object-fit:cover;
+}
+.banner-block-content{
+    position: absolute;
+    top:35%;
+    left:10%;
+}
+.banner-block-content h2{
+    font-size: 32px;
+    font-weight: bold;
+}
+.banner-block-content p{
+    font-size: 16px;
+}
+.banner-block-content a{
+    border:none;
+    background-color:black;
+    text-decoration:none;
+    color: white;
+    margin-top:20px;
+    padding:15px 20px;
+    border-radius:15px;
+    cursor: pointer;
+}
+.responsive-banner{
+  display: none;
+}
+@media (max-width:900px){
+  .desktop-banner{
+    display:none;
+  }
+  .responsive-banner{
+  display: block;
+  height:auto;
+}  
+.banner-block-content{
+  position:static;
+  padding:20px;
+  background-color:beige;
+}
+.responsive-banner img{
+  object-fit:contain;
+  height:auto;
+}
+}
+{% endstyle %}
+<p>{{ section.settings.test-text }}</p>
+<div class="basic-banner-content">
+  <div class="desktop-banner">
+    {% if section.settings.banner-image %}
+      {%- liquid
+        assign image_height = section.settings.banner-image.width | divided_by: section.settings.banner-image.aspect_ratio
+      -%}
+      {{
+        section.settings.banner-image
+        | image_url: width: 3840
+        | image_tag:
+          loading: 'lazy',
+          width: section.settings.banner-image.width,
+          height: image_height
+      }}
+    {% endif %}
+  </div>
+  <div class="responsive-banner">
+    {% if section.settings.banner-image-2 %}
+      {%- liquid
+        assign image_height = section.settings.banner-image-2.width | divided_by: section.settings.banner-image-2.aspect_ratio
+      -%}
+      {{
+        section.settings.banner-image-2
+        | image_url: width: 3840
+        | image_tag:
+          loading: 'lazy',
+          width: section.settings.banner-image-2.width,
+          height: image_height
+      }}
+    {% endif %}
+  </div>
+    <div class="banner-block-content">
+      {%- for block in section.blocks -%}
+        {%- case block.type -%}
+          {%- when 'heading' -%}
+            <h2 id="banner-h">
+              {{ block.settings.banner-heading }}
+            </h2>
+          {%- when 'text' -%}
+              <p>{{ block.settings.banner-text }}</p>
+          {%- when 'buttons' -%}
+            {%- if block.settings.banner-button != blank -%}
+                <a href="{{ block.settings.banner-button-link }}">
+                  {{- block.settings.banner-button | escape -}}
+                </a>
+              {%- endif -%}
+        {%- endcase -%}
+      {%- endfor -%}
+    </div>
+</div>
 {% schema %}
 {
     "name": "custom-banner",
@@ -67,111 +171,3 @@
   ]
 }
 {% endschema %}
-{% style %}
-    #banner-content{
-        position:relative;
-    }
-    #banner-content img{
-        width:100%;
-        object-fit:cover;
-    }
-    #banner-block-content{
-        position: absolute;
-        top:35%;
-        left:10%;
-    }
-    #banner-block-content h2{
-        font-size: 32px;
-        font-weight: bold;
-    }
-    #banner-block-content p{
-        font-size: 16px;
-    }
-    #banner-block-content button{
-        border:none;
-        background-color:black;
-        color: white;
-        margin-top:20px;
-        padding:15px 20px;
-        border-radius:15px;
-        cursor: pointer;
-    }
-    #responsive-banner{
-      display: none;
-    }
-    @media (max-width:900px){
-      #desktop-banner{
-        display:none;
-      }
-      #responsive-banner{
-      display: block;
-      height:auto;
-    }  
-    #banner-block-content{
-      position:static;
-      padding:20px;
-      background-color:beige;
-    }
-    #responsive-banner img{
-      object-fit:contain;
-      height:auto;
-    }
-    }
-{% endstyle %}
-<p>{{section.settings.test-text}}</p>
-<div id="banner-content">
-  <div id="desktop-banner">
-    {% if section.settings.banner-image %}
-      {%- liquid
-        assign image_height = section.settings.banner-image.width | divided_by: section.settings.banner-image.aspect_ratio
-      -%}
-      {{
-        section.settings.banner-image
-        | image_url: width: 3840
-        | image_tag:
-          loading: 'lazy',
-          width: section.settings.banner-image.width,
-          height: image_height
-      }}
-    {% endif %}
-  </div>
-  <div id="responsive-banner">
-    {% if section.settings.banner-image-2 %}
-      {%- liquid
-        assign image_height = section.settings.banner-image-2.width | divided_by: section.settings.banner-image-2.aspect_ratio
-      -%}
-      {{
-        section.settings.banner-image-2
-        | image_url: width: 3840
-        | image_tag:
-          loading: 'lazy',
-          width: section.settings.banner-image-2.width,
-          height: image_height
-      }}
-    {% endif %}
-  </div>
-    <div id="banner-block-content">
-      {%- for block in section.blocks -%}
-        {%- case block.type -%}
-          {%- when 'heading' -%}
-            <h2 id="banner-h">
-              {{ block.settings.banner-heading }}
-            </h2>
-          {%- when 'text' -%}
-              <p>{{ block.settings.banner-text }}</p>
-          {%- when 'buttons' -%}
-            {%- if block.settings.banner-button != blank -%}
-                <button
-                  {% if block.settings.banner-button-link == blank %}
-                    role="link" aria-disabled="true"
-                  {% else %}
-                    onclick=window.location.href="{{ block.settings.banner-button-link }}"
-                  {% endif %}
-                >
-                  {{- block.settings.banner-button | escape -}}
-                </button>
-              {%- endif -%}
-        {%- endcase -%}
-      {%- endfor -%}
-    </div>
-</div>

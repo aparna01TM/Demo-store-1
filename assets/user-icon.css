@@ -11,10 +11,16 @@
 .user-menu ul{
     list-style: none;
     margin-bottom: 5px;
+    text-align: left;
 }
 .user-menu li{
     padding-bottom: 10px;
     cursor:pointer;
+}
+.product-popup-modal__content{
+    width: 30% !important;
+    height: auto !important;
+    padding-bottom: 40px !important;
 }
 #user-login-link{
     text-decoration: none;
@@ -112,18 +118,17 @@
     background-color: white;
     color:black;
 }
+/* #login-modal-content, #register-modal-content, #forgot-passwor-content{
+    display:none;
+} */
 @media (max-width:1500px){
-    #login-modal, #register-modal, #forgot-password-modal{
-        width:500px;
+    .product-popup-modal__content{
+        width:500px !important;
     }
 }
 @media (max-width:600px){
-    #login-modal{
-        width:300px;
-        padding: 0;
-    }
-    #register-modal, #forgot-password-modal{
-        width:300px;
+    .product-popup-modal__content{
+        width:300px !important;
         padding:10px;
     }
 }
